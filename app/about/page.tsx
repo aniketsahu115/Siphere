@@ -32,20 +32,20 @@ export default function About() {
 
   const teamMembers = [
     {
-      name: "Alex Chen",
+      name: "Aniket Sahu",
       role: "Co-Founder & CEO",
       bio: "Former DeFi protocol architect with 8+ years in blockchain technology. Led development teams at major crypto exchanges.",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "",
       social: {
         linkedin: "#",
-        twitter: "#",
+        twitter: "",
         github: "#"
       },
       expertise: ["Blockchain Architecture", "DeFi Protocols", "Team Leadership"]
     },
     {
-      name: "Sarah Rodriguez",
-      role: "Co-Founder & CTO",
+      name: "Nilesh Pathak",
+      role: "Co-Founder ",
       bio: "Smart contract security expert and former Solana Labs engineer. Specialized in automated trading systems and protocol security.",
       image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400",
       social: {
