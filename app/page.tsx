@@ -125,7 +125,7 @@ export default function Home() {
                   >
                     <Sparkles className="w-4 h-4 mr-2" />
                   </motion.div>
-                  🚀 Now Live on Solana Devnet
+                   Now Live on Solana Devnet
                 </Badge>
               </motion.div>
               
@@ -1169,9 +1169,9 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
               >
                 <motion.img 
-                  src="/logo.png" 
+                  src="/logo2-removebg.png" 
                   alt="Siphere Logo" 
-                  className="h-8 w-8"
+                  className="h-12 w-12"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 />
@@ -1217,10 +1217,10 @@ export default function Home() {
                   <div>
                     <div className="flex space-x-4 mb-4">
                       {[
-                        { icon: Twitter, href: "#" },
-                        { icon: Github, href: "#" },
-                        { icon: MessageCircle, href: "#" },
-                        { icon: Mail, href: "#" }
+                        { icon: Twitter, href: "https://x.com/Siphere03" },
+                        { icon: Github, href: "https://github.com/NileshRP010/Siphere" },
+                        { icon: MessageCircle, href: "https://discord.com/" },
+                        { icon: Mail, href: "mailto:nileshpathak781@gmail.com" }
                       ].map((social, index) => (
                         <motion.div
                           key={index}
@@ -1269,7 +1269,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <motion.p whileHover={{ scale: 1.02 }}>
-              &copy; 2024 Siphere. All rights reserved. Built on Solana blockchain.
+              &copy; 2025 Siphere. All rights reserved. Built on Solana blockchain.
             </motion.p>
           </motion.div>
         </div>

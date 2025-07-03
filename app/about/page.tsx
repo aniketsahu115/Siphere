@@ -82,9 +82,9 @@ export default function About() {
 
   const roadmapItems = [
     {
-      quarter: "Q1 2024",
+      quarter: "Q2 2025",
       title: "Platform Launch",
-      status: "completed",
+      status: "in-Progress",
       items: [
         "Core SIP functionality",
         "Marinade staking integration",
@@ -93,9 +93,9 @@ export default function About() {
       ]
     },
     {
-      quarter: "Q2 2024",
+      quarter: "Q3 2025",
       title: "Protocol Expansion",
-      status: "completed",
+      status: "in-Progress",
       items: [
         "Solend lending integration",
         "Jupiter swap integration",
@@ -104,7 +104,7 @@ export default function About() {
       ]
     },
     {
-      quarter: "Q3 2024",
+      quarter: "Q4 2025",
       title: "DAO Governance",
       status: "in-progress",
       items: [
@@ -115,9 +115,9 @@ export default function About() {
       ]
     },
     {
-      quarter: "Q4 2024",
+      quarter: "Q1 2026",
       title: "Advanced Features",
-      status: "planned",
+      status: "In-Progress",
       items: [
         "Multi-chain support",
         "Advanced strategy builder",
@@ -126,9 +126,9 @@ export default function About() {
       ]
     },
     {
-      quarter: "Q1 2025",
+      quarter: "Q2 2026",
       title: "Global Expansion",
-      status: "planned",
+      status: "In-Progress",
       items: [
         "Regulatory compliance",
         "Fiat on-ramps",
@@ -477,7 +477,7 @@ export default function About() {
                               }
                             >
                               {item.status === 'completed' ? 'Completed' :
-                               item.status === 'in-progress' ? 'In Progress' : 'Planned'}
+                               item.status === 'in-progress' ? 'In Progress' : 'In Progress'}
                             </Badge>
                           </div>
                           <CardTitle className="text-xl">{item.title}</CardTitle>
