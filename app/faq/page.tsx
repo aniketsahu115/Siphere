@@ -44,7 +44,7 @@ export default function FAQ() {
     },
     {
       category: 'getting-started',
-      question: 'How do I get started with Siphera?',
+      question: 'How do I get started with Siphere?',
       answer: 'Getting started is simple: 1) Connect your Solana wallet (like Phantom), 2) Choose your investment token (USDC, USDT, or SOL), 3) Set your investment amount and frequency, 4) Select your DeFi strategy (staking, lending, or hybrid), 5) Optionally enable insurance protection, and 6) Confirm your SIP creation. Your first investment will execute according to your schedule.'
     },
     {
@@ -112,7 +112,7 @@ export default function FAQ() {
     {
       category: 'security',
       question: 'Do you have access to my private keys?',
-      answer: 'No, we never have access to your private keys. Siphera is non-custodial, meaning you maintain full control of your funds at all times. We only interact with your wallet when you explicitly approve transactions.'
+      answer: 'No, we never have access to your private keys. Siphere is non-custodial, meaning you maintain full control of your funds at all times. We only interact with your wallet when you explicitly approve transactions.'
     },
 
     {
@@ -128,7 +128,7 @@ export default function FAQ() {
     {
       category: 'returns',
       question: 'Can I withdraw my investments anytime?',
-      answer: 'Yes, you can withdraw your investments at any time. Withdrawals are processed immediately for lending positions and within 1-2 epochs (2-4 days) for staking positions due to Solana\'s unstaking period. There are no withdrawal penalties from Siphera.'
+      answer: 'Yes, you can withdraw your investments at any time. Withdrawals are processed immediately for lending positions and within 1-2 epochs (2-4 days) for staking positions due to Solana\'s unstaking period. There are no withdrawal penalties from Siphere.'
     },
     {
       category: 'returns',
@@ -155,12 +155,12 @@ export default function FAQ() {
     {
       category: 'governance',
       question: 'How does DAO governance work?',
-      answer: 'Siphera is governed by token holders who vote on important decisions including insurance claim approvals, protocol parameter changes, new feature development, and treasury management. Voting power is proportional to token holdings, and all proposals require community consensus.'
+      answer: 'Siphere is governed by token holders who vote on important decisions including insurance claim approvals, protocol parameter changes, new feature development, and treasury management. Voting power is proportional to token holdings, and all proposals require community consensus.'
     },
     {
       category: 'governance',
       question: 'How can I participate in governance?',
-      answer: 'To participate in governance, you need to hold Siphera governance tokens (launching Q3 2024). Token holders can create proposals, vote on existing proposals, and participate in community discussions. Active participation is rewarded with additional tokens and platform benefits.'
+      answer: 'To participate in governance, you need to hold Siphere governance tokens (launching Q3 2024). Token holders can create proposals, vote on existing proposals, and participate in community discussions. Active participation is rewarded with additional tokens and platform benefits.'
     }
   ];
 
@@ -194,7 +194,7 @@ export default function FAQ() {
                 <span className="gradient-text block">Questions</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Find answers to common questions about Siphera, automated investing, 
+                Find answers to common questions about Siphere, automated investing, 
                 and DeFi strategies. Can't find what you're looking for? Contact our support team.
               </p>
             </motion.div>

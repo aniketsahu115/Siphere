@@ -964,13 +964,13 @@ export default function Home() {
               className="text-4xl md:text-5xl font-bold mb-6"
               whileHover={{ scale: 1.02 }}
             >
-              About Siphera
+              About Siphere
             </motion.h2>
             <motion.p 
               className="text-lg text-muted-foreground mb-8 leading-relaxed"
               whileHover={{ scale: 1.01 }}
             >
-              Siphera's mission is to democratize long-term crypto investing through automation and protection. 
+              Siphere's mission is to democratize long-term crypto investing through automation and protection. 
               We provide safe, automated, and transparent DeFi investment solutions that remove the complexity 
               of manual portfolio management while offering optional insurance against protocol risks.
             </motion.p>
@@ -1069,7 +1069,7 @@ export default function Home() {
               Frequently Asked Questions
             </motion.h2>
             <p className="text-xl text-muted-foreground">
-              Everything you need to know about Siphera
+              Everything you need to know about Siphere
             </p>
           </motion.div>
 
@@ -1175,7 +1175,7 @@ export default function Home() {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 />
-                <span className="text-xl font-bold gradient-text">Siphera</span>
+                <span className="text-xl font-bold gradient-text">Siphere</span>
               </motion.div>
               <p className="text-muted-foreground text-sm">
                 Automated DeFi investment platform for systematic crypto investing with optional insurance protection.
@@ -1269,7 +1269,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <motion.p whileHover={{ scale: 1.02 }}>
-              &copy; 2024 Siphera. All rights reserved. Built on Solana blockchain.
+              &copy; 2024 Siphere. All rights reserved. Built on Solana blockchain.
             </motion.p>
           </motion.div>
         </div>

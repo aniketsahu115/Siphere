@@ -62,13 +62,13 @@ export function Navigation() {
             >
               <Link href="/" className="flex items-center space-x-3 hover-glow">
                 <motion.img 
-                  src="/logo.png" 
-                  alt="Siphera Logo" 
-                  className="h-8 w-8"
+                  src="/logo2-removebg.png" 
+                  alt="Siphere Logo" 
+                  className="h-12 w-12"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 />
-                <span className="text-xl font-bold gradient-text">Siphera</span>
+                <span className="text-xl font-bold gradient-text">Siphere</span>
               </Link>
             </motion.div>
           </div>

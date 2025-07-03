@@ -8,7 +8,7 @@ import { WalletProvider } from '@/components/wallet-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Siphera - Automated DeFi Investment Platform',
+  title: 'Siphere - Automated DeFi Investment Platform',
   description: 'Invest Smarter, Automatically. Create systematic investment plans with stablecoins or SOL on Solana blockchain.',
 };
 

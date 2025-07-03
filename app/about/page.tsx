@@ -181,7 +181,7 @@ export default function About() {
               </Badge>
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 About
-                <span className="gradient-text block">Siphera</span>
+                <span className="gradient-text block">Siphere</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 We're democratizing long-term crypto investing through automation, transparency, 
@@ -205,7 +205,7 @@ export default function About() {
                   Our Mission
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Siphera was born from the belief that everyone should have access to sophisticated 
+                  Siphere was born from the belief that everyone should have access to sophisticated 
                   investment strategies, regardless of their technical knowledge or investment size. 
                   We're building the infrastructure to make systematic crypto investing as simple 
                   as setting up a traditional savings account.
@@ -437,7 +437,7 @@ export default function About() {
                 Our Roadmap
               </h2>
               <p className="text-xl text-muted-foreground">
-                The journey ahead for Siphera
+                The journey ahead for Siphere
               </p>
             </motion.div>
 
@@ -534,7 +534,7 @@ export default function About() {
                 Join Our Mission
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Be part of the future of automated DeFi investing. Start your journey with Siphera today.
+                Be part of the future of automated DeFi investing. Start your journey with Siphere today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
