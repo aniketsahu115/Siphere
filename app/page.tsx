@@ -1170,7 +1170,7 @@ export default function Home() {
               >
                 <motion.img 
                   src="/logo.png" 
-                  alt="Siphera Logo" 
+                  alt="Siphere Logo" 
                   className="h-8 w-8"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
