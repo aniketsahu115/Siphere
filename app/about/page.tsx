@@ -32,49 +32,49 @@ export default function About() {
 
   const teamMembers = [
     {
-      name: "Aniket Sahu",
+      name: "Sameer Kumar Mishra",
       role: "Co-Founder & CEO",
-      bio: "Former DeFi protocol architect with 8+ years in blockchain technology. Led development teams at major crypto exchanges.",
-      image: "",
+      bio: "Former DeFi protocol architect with 1+ years in blockchain technology. Led development teams at major web2 platforms.",
+      image: "https://avatars.githubusercontent.com/u/101687422?v=4",
       social: {
-        linkedin: "#",
-        twitter: "",
-        github: "#"
+        linkedin: "https://www.linkedin.com/in/sameer-mishra-967412239/",
+        twitter: "https://x.com/bytewolf_eth",
+        github: "https://github.com/Itssam06"
       },
       expertise: ["Blockchain Architecture", "DeFi Protocols", "Team Leadership"]
     },
     {
       name: "Nilesh Pathak",
       role: "Co-Founder ",
-      bio: "Smart contract security expert and former Solana Labs engineer. Specialized in automated trading systems and protocol security.",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400",
+      bio: "Smart contract security expert and former Community Builder.",
+      image: "https://avatars.githubusercontent.com/u/171451738?v=4",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: "https://www.linkedin.com/in/nilesh-pathak-334848255",
+        twitter: "https://x.com/Nilesh_417",
+        github: "https://github.com/NileshRP010"
       },
       expertise: ["Smart Contracts", "Security Auditing", "Solana Development"]
     },
     {
-      name: "Marcus Thompson",
+      name: "Aniket Sahu",
       role: "Head of Product",
-      bio: "Product strategist with fintech background. Previously led product teams at traditional investment platforms before transitioning to DeFi.",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400",
+      bio: "Product strategist with fintech background. Previously led product teams at ZeroSwap traditional investment platforms before transitioning to DeFi.",
+      image: "https://avatars.githubusercontent.com/u/116273831?v=4",
       social: {
-        linkedin: "#",
-        twitter: "#"
+        linkedin: "https://www.linkedin.com/in/aniketsahu115/",
+        twitter: "https://twitter.com/aniketsahu_115"
       },
       expertise: ["Product Strategy", "User Experience", "Financial Services"]
     },
     {
-      name: "Emily Zhang",
+      name: "Harsh Sharma",
       role: "Head of Engineering",
       bio: "Full-stack engineer with expertise in distributed systems. Former senior engineer at major tech companies with focus on scalable infrastructure.",
-      image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400",
+      image: "https://avatars.githubusercontent.com/u/165451996?v=4",
       social: {
         linkedin: "#",
-        twitter: "#",
-        github: "#"
+        twitter: "https://x.com/harsh_sharmaa9",
+        github: "https://github.com/harshdev2909"
       },
       expertise: ["Distributed Systems", "Backend Architecture", "DevOps"]
     }
