@@ -125,7 +125,7 @@ export default function Home() {
                   >
                     <Sparkles className="w-4 h-4 mr-2" />
                   </motion.div>
-                   Now Live on Solana Devnet
+                   Now Soon Live on Solana Devnet
                 </Badge>
               </motion.div>
               
