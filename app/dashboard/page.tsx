@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  TrendingUp, 
-  DollarSign, 
-  Calendar, 
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  TrendingUp,
+  DollarSign,
+  Calendar,
   Shield,
   Plus,
   MoreHorizontal,
@@ -15,129 +15,140 @@ import {
   Play,
   Pause,
   Settings,
-  Trash2
-} from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Navigation } from '@/components/navigation';
-import Link from 'next/link';
+  Trash2,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Navigation } from "@/components/navigation";
+import Link from "next/link";
 
 const portfolioData = {
-  totalValue: 15420.50,
-  totalInvested: 12800.00,
-  totalReturns: 2620.50,
+  totalValue: 15420.5,
+  totalInvested: 12800.0,
+  totalReturns: 2620.5,
   returnPercentage: 20.47,
   activeSIPs: 5,
-  nextInvestment: '2024-01-15'
+  nextInvestment: "2025-01-15",
 };
 
 const sipPlans = [
   {
     id: 1,
-    name: 'USDC Staking SIP',
+    name: "USDC Staking SIP",
     amount: 500,
-    frequency: 'Weekly',
-    strategy: 'Marinade Staking',
+    frequency: "Weekly",
+    strategy: "Marinade Staking",
     currentValue: 6850,
     invested: 6000,
     returns: 850,
-    status: 'Active',
-    nextExecution: '2024-01-08',
+    status: "Active",
+    nextExecution: "2025-01-08",
     apy: 8.2,
-    insurance: true
+    insurance: true,
   },
   {
     id: 2,
-    name: 'SOL DCA Plan',
+    name: "SOL DCA Plan",
     amount: 200,
-    frequency: 'Bi-weekly',
-    strategy: 'Split Strategy',
+    frequency: "Bi-weekly",
+    strategy: "Split Strategy",
     currentValue: 4200,
     invested: 3600,
     returns: 600,
-    status: 'Active',
-    nextExecution: '2024-01-10',
+    status: "Active",
+    nextExecution: "2025-01-10",
     apy: 12.5,
-    insurance: false
+    insurance: false,
   },
   {
     id: 3,
-    name: 'Conservative USDT',
+    name: "Conservative USDT",
     amount: 300,
-    frequency: 'Monthly',
-    strategy: 'Solend Lending',
+    frequency: "Monthly",
+    strategy: "Solend Lending",
     currentValue: 3150,
     invested: 3000,
     returns: 150,
-    status: 'Active',
-    nextExecution: '2024-01-15',
+    status: "Active",
+    nextExecution: "2025-01-15",
     apy: 5.8,
-    insurance: true
+    insurance: true,
   },
   {
     id: 4,
-    name: 'High Yield Mix',
+    name: "High Yield Mix",
     amount: 150,
-    frequency: 'Weekly',
-    strategy: 'Mixed DeFi',
+    frequency: "Weekly",
+    strategy: "Mixed DeFi",
     currentValue: 1220,
     invested: 1200,
     returns: 20,
-    status: 'Paused',
-    nextExecution: '2024-01-12',
+    status: "Paused",
+    nextExecution: "2025-01-12",
     apy: 15.2,
-    insurance: false
-  }
+    insurance: false,
+  },
 ];
 
 const recentTransactions = [
   {
     id: 1,
-    type: 'Investment',
+    type: "Investment",
     amount: 500,
-    token: 'USDC',
-    strategy: 'Marinade Staking',
-    timestamp: '2024-01-01T10:30:00Z',
-    status: 'Completed',
-    txHash: '5KJp7z...'
+    token: "USDC",
+    strategy: "Marinade Staking",
+    timestamp: "2025-01-01T10:30:00Z",
+    status: "Completed",
+    txHash: "5KJp7z...",
   },
   {
     id: 2,
-    type: 'Yield',
+    type: "Yield",
     amount: 42.5,
-    token: 'SOL',
-    strategy: 'Split Strategy',
-    timestamp: '2024-01-01T08:15:00Z',
-    status: 'Completed',
-    txHash: '3Hm9k2...'
+    token: "SOL",
+    strategy: "Split Strategy",
+    timestamp: "2025-01-01T08:15:00Z",
+    status: "Completed",
+    txHash: "3Hm9k2...",
   },
   {
     id: 3,
-    type: 'Investment',
+    type: "Investment",
     amount: 300,
-    token: 'USDT',
-    strategy: 'Solend Lending',
-    timestamp: '2023-12-31T14:45:00Z',
-    status: 'Completed',
-    txHash: '7Qw8n5...'
+    token: "USDT",
+    strategy: "Solend Lending",
+    timestamp: "2025-12-31T14:45:00Z",
+    status: "Completed",
+    txHash: "7Qw8n5...",
   },
   {
     id: 4,
-    type: 'Insurance',
+    type: "Insurance",
     amount: 7.5,
-    token: 'USDC',
-    strategy: 'Premium Payment',
-    timestamp: '2023-12-31T10:20:00Z',
-    status: 'Completed',
-    txHash: '9Rt4m1...'
-  }
+    token: "USDC",
+    strategy: "Premium Payment",
+    timestamp: "2025-12-31T10:20:00Z",
+    status: "Completed",
+    txHash: "9Rt4m1...",
+  },
 ];
 
 export default function Dashboard() {
-  const [selectedPeriod, setSelectedPeriod] = useState('7d');
+  const [selectedPeriod, setSelectedPeriod] = useState("7d");
 
   const handleSIPAction = (sipId: number, action: string) => {
     console.log(`${action} SIP ${sipId}`);
@@ -147,13 +158,15 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <div className="pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <div>
             <h1 className="text-3xl font-bold mb-2">Portfolio Dashboard</h1>
-            <p className="text-muted-foreground">Track your SIP performance and manage investments</p>
+            <p className="text-muted-foreground">
+              Track your SIP performance and manage investments
+            </p>
           </div>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium mt-4 sm:mt-0">
             <Link href="/create-sip" className="flex items-center">
@@ -172,14 +185,18 @@ export default function Dashboard() {
           >
             <Card className="glass-card">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Total Portfolio Value</CardTitle>
+                <CardTitle className="text-sm font-medium">
+                  Total Portfolio Value
+                </CardTitle>
                 <DollarSign className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">${portfolioData.totalValue.toLocaleString()}</div>
+                <div className="text-2xl font-bold">
+                  ${portfolioData.totalValue.toLocaleString()}
+                </div>
                 <div className="flex items-center text-xs text-green-400 mt-1">
-                  <ArrowUpRight className="w-3 h-3 mr-1" />
-                  +{portfolioData.returnPercentage}%
+                  <ArrowUpRight className="w-3 h-3 mr-1" />+
+                  {portfolioData.returnPercentage}%
                 </div>
               </CardContent>
             </Card>
@@ -192,11 +209,15 @@ export default function Dashboard() {
           >
             <Card className="glass-card">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Total Invested</CardTitle>
+                <CardTitle className="text-sm font-medium">
+                  Total Invested
+                </CardTitle>
                 <TrendingUp className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">${portfolioData.totalInvested.toLocaleString()}</div>
+                <div className="text-2xl font-bold">
+                  ${portfolioData.totalInvested.toLocaleString()}
+                </div>
                 <p className="text-xs text-muted-foreground mt-1">
                   Across {portfolioData.activeSIPs} active SIPs
                 </p>
@@ -211,11 +232,15 @@ export default function Dashboard() {
           >
             <Card className="glass-card">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Total Returns</CardTitle>
+                <CardTitle className="text-sm font-medium">
+                  Total Returns
+                </CardTitle>
                 <Activity className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-green-400">+${portfolioData.totalReturns.toLocaleString()}</div>
+                <div className="text-2xl font-bold text-green-400">
+                  +${portfolioData.totalReturns.toLocaleString()}
+                </div>
                 <p className="text-xs text-muted-foreground mt-1">
                   Since inception
                 </p>
@@ -230,7 +255,9 @@ export default function Dashboard() {
           >
             <Card className="glass-card">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Next Investment</CardTitle>
+                <CardTitle className="text-sm font-medium">
+                  Next Investment
+                </CardTitle>
                 <Calendar className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
@@ -267,7 +294,10 @@ export default function Dashboard() {
                           <CardTitle className="text-lg flex items-center gap-2">
                             {sip.name}
                             {sip.insurance && (
-                              <Shield className="w-4 h-4 text-primary" title="Insurance Protected" />
+                              <Shield
+                                className="w-4 h-4 text-primary"
+                                title="Insurance Protected"
+                              />
                             )}
                           </CardTitle>
                           <CardDescription>
@@ -275,9 +305,15 @@ export default function Dashboard() {
                           </CardDescription>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <Badge 
-                            variant={sip.status === 'Active' ? 'secondary' : 'outline'}
-                            className={sip.status === 'Active' ? 'bg-green-500/10 text-green-400' : ''}
+                          <Badge
+                            variant={
+                              sip.status === "Active" ? "secondary" : "outline"
+                            }
+                            className={
+                              sip.status === "Active"
+                                ? "bg-green-500/10 text-green-400"
+                                : ""
+                            }
                           >
                             {sip.status}
                           </Badge>
@@ -288,12 +324,21 @@ export default function Dashboard() {
                               </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                              <DropdownMenuItem onClick={() => handleSIPAction(sip.id, 'edit')}>
+                              <DropdownMenuItem
+                                onClick={() => handleSIPAction(sip.id, "edit")}
+                              >
                                 <Settings className="w-4 h-4 mr-2" />
                                 Edit Plan
                               </DropdownMenuItem>
-                              <DropdownMenuItem onClick={() => handleSIPAction(sip.id, sip.status === 'Active' ? 'pause' : 'resume')}>
-                                {sip.status === 'Active' ? (
+                              <DropdownMenuItem
+                                onClick={() =>
+                                  handleSIPAction(
+                                    sip.id,
+                                    sip.status === "Active" ? "pause" : "resume"
+                                  )
+                                }
+                              >
+                                {sip.status === "Active" ? (
                                   <>
                                     <Pause className="w-4 h-4 mr-2" />
                                     Pause Plan
@@ -305,9 +350,11 @@ export default function Dashboard() {
                                   </>
                                 )}
                               </DropdownMenuItem>
-                              <DropdownMenuItem 
+                              <DropdownMenuItem
                                 className="text-destructive"
-                                onClick={() => handleSIPAction(sip.id, 'delete')}
+                                onClick={() =>
+                                  handleSIPAction(sip.id, "delete")
+                                }
                               >
                                 <Trash2 className="w-4 h-4 mr-2" />
                                 Delete Plan
@@ -320,15 +367,25 @@ export default function Dashboard() {
                     <CardContent>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div>
-                          <p className="text-sm text-muted-foreground">Current Value</p>
-                          <p className="text-lg font-semibold">${sip.currentValue.toLocaleString()}</p>
+                          <p className="text-sm text-muted-foreground">
+                            Current Value
+                          </p>
+                          <p className="text-lg font-semibold">
+                            ${sip.currentValue.toLocaleString()}
+                          </p>
                         </div>
                         <div>
-                          <p className="text-sm text-muted-foreground">Invested</p>
-                          <p className="text-lg font-semibold">${sip.invested.toLocaleString()}</p>
+                          <p className="text-sm text-muted-foreground">
+                            Invested
+                          </p>
+                          <p className="text-lg font-semibold">
+                            ${sip.invested.toLocaleString()}
+                          </p>
                         </div>
                         <div>
-                          <p className="text-sm text-muted-foreground">Returns</p>
+                          <p className="text-sm text-muted-foreground">
+                            Returns
+                          </p>
                           <p className="text-lg font-semibold text-green-400">
                             +${sip.returns.toLocaleString()}
                           </p>
@@ -340,7 +397,10 @@ export default function Dashboard() {
                       </div>
                       <div className="mt-4 pt-4 border-t border-border">
                         <p className="text-sm text-muted-foreground">
-                          Next execution: <span className="text-foreground font-medium">{sip.nextExecution}</span>
+                          Next execution:{" "}
+                          <span className="text-foreground font-medium">
+                            {sip.nextExecution}
+                          </span>
                         </p>
                       </div>
                     </CardContent>
@@ -354,7 +414,9 @@ export default function Dashboard() {
             <Card className="glass-card">
               <CardHeader>
                 <CardTitle>Recent Transactions</CardTitle>
-                <CardDescription>Your latest SIP executions, yields, and insurance payments</CardDescription>
+                <CardDescription>
+                  Your latest SIP executions, yields, and insurance payments
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -368,9 +430,9 @@ export default function Dashboard() {
                     >
                       <div className="flex items-center space-x-4">
                         <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                          {tx.type === 'Investment' ? (
+                          {tx.type === "Investment" ? (
                             <ArrowUpRight className="w-5 h-5 text-primary" />
-                          ) : tx.type === 'Yield' ? (
+                          ) : tx.type === "Yield" ? (
                             <TrendingUp className="w-5 h-5 text-green-400" />
                           ) : (
                             <Shield className="w-5 h-5 text-blue-400" />
@@ -378,13 +440,20 @@ export default function Dashboard() {
                         </div>
                         <div>
                           <p className="font-medium">{tx.type}</p>
-                          <p className="text-sm text-muted-foreground">{tx.strategy}</p>
-                          <p className="text-xs text-muted-foreground">Tx: {tx.txHash}</p>
+                          <p className="text-sm text-muted-foreground">
+                            {tx.strategy}
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            Tx: {tx.txHash}
+                          </p>
                         </div>
                       </div>
                       <div className="text-right">
                         <p className="font-semibold">
-                          {tx.type === 'Investment' || tx.type === 'Insurance' ? '-' : '+'}${tx.amount} {tx.token}
+                          {tx.type === "Investment" || tx.type === "Insurance"
+                            ? "-"
+                            : "+"}
+                          ${tx.amount} {tx.token}
                         </p>
                         <p className="text-sm text-muted-foreground">
                           {new Date(tx.timestamp).toLocaleDateString()}
@@ -404,14 +473,19 @@ export default function Dashboard() {
             <Card className="glass-card">
               <CardHeader>
                 <CardTitle>Performance Analytics</CardTitle>
-                <CardDescription>Detailed insights into your investment performance</CardDescription>
+                <CardDescription>
+                  Detailed insights into your investment performance
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="text-center py-12">
                   <Activity className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">Analytics Coming Soon</h3>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Analytics Coming Soon
+                  </h3>
                   <p className="text-muted-foreground">
-                    We're building comprehensive analytics to help you track your performance.
+                    We're building comprehensive analytics to help you track
+                    your performance.
                   </p>
                 </div>
               </CardContent>
