@@ -637,8 +637,8 @@ export default function Claims() {
                         <p className="text-muted-foreground">
                           Your claim will be reviewed by our DAO governance
                           system. Initial validation takes 24-48 hours, followed
-                          by community review. You'll receive updates via email
-                          and can track progress in your dashboard.
+                          by community review. You&apos;ll receive updates via
+                          email and can track progress in your dashboard.
                         </p>
                       </div>
                     </div>

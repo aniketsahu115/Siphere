@@ -481,8 +481,8 @@ export default function Dashboard() {
                     Analytics Coming Soon
                   </h3>
                   <p className="text-muted-foreground">
-                    We're building comprehensive analytics to help you track
-                    your performance.
+                    We&apos;re building comprehensive analytics to help you
+                    track your performance.
                   </p>
                 </div>
               </CardContent>

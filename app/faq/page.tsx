@@ -240,8 +240,8 @@ export default function FAQ() {
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Find answers to common questions about Siphere, automated
-                investing, and DeFi strategies. Can't find what you're looking
-                for? Contact our support team.
+                investing, and DeFi strategies. Can&apos;t find what you&apos;re
+                looking for? Contact our support team.
               </p>
             </motion.div>
 
@@ -323,8 +323,9 @@ export default function FAQ() {
                     <div className="mb-6">
                       <p className="text-muted-foreground">
                         Found {filteredFAQs.length} result
-                        {filteredFAQs.length !== 1 ? "s" : ""} for "{searchTerm}
-                        "
+                        {filteredFAQs.length !== 1 ? "s" : ""} for &ldquo;
+                        {searchTerm}
+                        &rdquo;
                       </p>
                     </div>
                   )}
@@ -412,8 +413,8 @@ export default function FAQ() {
                 Still Need Help?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Can't find the answer you're looking for? Our support team is
-                here to help.
+                Can&apos;t find the answer you&apos;re looking for? Our support
+                team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
