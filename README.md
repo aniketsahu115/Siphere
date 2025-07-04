@@ -1,7 +1,7 @@
 # Siphere
 **[Live Website](https://siphere.vercel.app/)**
 
-**[Watch the video](https://drive.google.com/file/d/1iXyJIbPlptCCbPQef2j8xn07sIWp0QL9/view?usp=share)**
+**[Watch the video]()**
 
 Siphere is a decentralized platform that enables automated crypto investing through Systematic Investment Plans (SIPs) on Solana. 
 
