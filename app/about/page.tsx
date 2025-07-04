@@ -409,11 +409,11 @@ export default function About() {
                             <Twitter className="w-5 h-5" />
                           </Link>
                         )}
-                        {teamMembers[activeTeamMember].social.github && (
+                        {teamMembers[activeTeamMember].social.github ? (
                           <Link href={teamMembers[activeTeamMember].social.github} className="text-muted-foreground hover:text-primary transition-colors">
                             <Github className="w-5 h-5" />
                           </Link>
-                        )}
+                        ) : null}
                       </div>
                     </div>
                   </CardContent>
