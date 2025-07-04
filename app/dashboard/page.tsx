@@ -294,10 +294,7 @@ export default function Dashboard() {
                           <CardTitle className="text-lg flex items-center gap-2">
                             {sip.name}
                             {sip.insurance && (
-                              <Shield
-                                className="w-4 h-4 text-primary"
-                                title="Insurance Protected"
-                              />
+                              <Shield className="w-4 h-4 text-primary" />
                             )}
                           </CardTitle>
                           <CardDescription>
