@@ -3,16 +3,13 @@
 
 **[Watch the video]()**
 
-Siphere is a decentralized platform that enables automated crypto investing through Systematic Investment Plans (SIPs) on Solana. 
+Siphere is a decentralized platform built on the Solana blockchain that enables users to automate long-term crypto investing through Systematic Investment Plans (SIPs), integrating staking, lending, and optional insurance for enhanced risk protection.
 
 ![Home Page](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/HomePage.png)
 ![Features](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/Powerful-Features.png)
 ![Dashboard](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/Portfolio%20Dashboard.png)
 ![Track your Investment](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/Track-Your-Investments.png)
 ![Investment Section](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/Investment.png)
-
-
-A decentralized SIP (Systematic Investment Plan) platform built on the Solana blockchain that enables users to automate long-term crypto investing through staking and lending, with optional insurance for enhanced risk protection.
 
 ---
 
@@ -57,7 +54,7 @@ Autovest brings the discipline of traditional SIP investing into crypto. It allo
 
 ---
 
-##  Installation (for local development)
+##  Installation (for local development) Support if you want to add changes 
 
 ```bash
 git clone https://github.com/your-repo/your-project.git
