@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    domains: ["avatars.githubusercontent.com"],
+  },
+  experimental: {
+    optimizeCss: false,
+  },
 };
 
 module.exports = nextConfig;
