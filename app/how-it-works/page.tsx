@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Clock, 
-  DollarSign, 
-  TrendingUp, 
-  Shield, 
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  Shield,
   Settings,
   Repeat,
   PiggyBank,
@@ -18,14 +18,20 @@ import {
   BarChart3,
   Layers,
   Globe,
-  Lock
-} from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Navigation } from '@/components/navigation';
-import Link from 'next/link';
+  Lock,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Navigation } from "@/components/navigation";
+import Link from "next/link";
 
 export default function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
@@ -40,8 +46,8 @@ export default function HowItWorks() {
         "Choose your preferred token (USDC, USDT, SOL)",
         "Set investment amount per interval",
         "Select frequency (daily, weekly, bi-weekly, monthly)",
-        "Pick your DeFi strategy (staking, lending, or hybrid)"
-      ]
+        "Pick your DeFi strategy (staking, lending, or hybrid)",
+      ],
     },
     {
       title: "Auto Invest",
@@ -52,8 +58,8 @@ export default function HowItWorks() {
         "Smart contracts automatically execute investments",
         "Funds are deployed to selected DeFi protocols",
         "Dollar-cost averaging reduces volatility impact",
-        "No manual intervention required"
-      ]
+        "No manual intervention required",
+      ],
     },
     {
       title: "Earn + Insure",
@@ -64,9 +70,9 @@ export default function HowItWorks() {
         "Earn passive yield from staking and lending",
         "Optional insurance protects against protocol failures",
         "Transparent tracking of all transactions",
-        "Withdraw or compound earnings anytime"
-      ]
-    }
+        "Withdraw or compound earnings anytime",
+      ],
+    },
   ];
 
   const strategies = [
@@ -77,16 +83,16 @@ export default function HowItWorks() {
       risk: "Low",
       protocols: ["Marinade Finance", "Lido", "Jito"],
       icon: Lock,
-      color: "from-blue-500/20 to-blue-600/20"
+      color: "from-blue-500/20 to-blue-600/20",
     },
     {
-      name: "Lending Strategy", 
+      name: "Lending Strategy",
       description: "Lend stablecoins on Solend for stable yields",
       apy: "5-8%",
       risk: "Low",
       protocols: ["Solend", "Mango Markets", "Tulip Protocol"],
       icon: DollarSign,
-      color: "from-green-500/20 to-green-600/20"
+      color: "from-green-500/20 to-green-600/20",
     },
     {
       name: "Hybrid Strategy",
@@ -95,25 +101,28 @@ export default function HowItWorks() {
       risk: "Medium",
       protocols: ["Multiple Protocols", "Auto-Rebalancing"],
       icon: BarChart3,
-      color: "from-purple-500/20 to-purple-600/20"
-    }
+      color: "from-purple-500/20 to-purple-600/20",
+    },
   ];
 
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <div className="pt-20">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-background via-muted/20 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Badge variant="secondary" className="mb-6 bg-primary/10 text-primary border-primary/20">
+              <Badge
+                variant="secondary"
+                className="mb-6 bg-primary/10 text-primary border-primary/20"
+              >
                 <Target className="w-4 h-4 mr-2" />
                 Complete Guide
               </Badge>
@@ -122,8 +131,9 @@ export default function HowItWorks() {
                 <span className="gradient-text block">Works</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Discover the complete process of automated DeFi investing with systematic investment plans, 
-                from setup to yield generation with optional insurance protection.
+                Discover the complete process of automated DeFi investing with
+                systematic investment plans, from setup to yield generation with
+                optional insurance protection.
               </p>
             </motion.div>
           </div>
@@ -132,7 +142,7 @@ export default function HowItWorks() {
         {/* Interactive Steps Section */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -158,26 +168,38 @@ export default function HowItWorks() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <Card 
+                    <Card
                       className={`glass-card cursor-pointer transition-all duration-300 ${
-                        activeStep === index 
-                          ? 'border-primary/50 bg-primary/5' 
-                          : 'hover:border-primary/30'
+                        activeStep === index
+                          ? "border-primary/50 bg-primary/5"
+                          : "hover:border-primary/30"
                       }`}
                       onClick={() => setActiveStep(index)}
                     >
                       <CardHeader>
                         <div className="flex items-center space-x-4">
-                          <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${
-                            activeStep === index ? 'from-primary/30 to-primary/50' : 'from-muted/30 to-muted/50'
-                          } flex items-center justify-center`}>
-                            <step.icon className={`w-6 h-6 ${
-                              activeStep === index ? 'text-primary' : step.color
-                            }`} />
+                          <div
+                            className={`w-12 h-12 rounded-full bg-gradient-to-br ${
+                              activeStep === index
+                                ? "from-primary/30 to-primary/50"
+                                : "from-muted/30 to-muted/50"
+                            } flex items-center justify-center`}
+                          >
+                            <step.icon
+                              className={`w-6 h-6 ${
+                                activeStep === index
+                                  ? "text-primary"
+                                  : step.color
+                              }`}
+                            />
                           </div>
                           <div>
-                            <CardTitle className="text-xl">{step.title}</CardTitle>
-                            <CardDescription>{step.description}</CardDescription>
+                            <CardTitle className="text-xl">
+                              {step.title}
+                            </CardTitle>
+                            <CardDescription>
+                              {step.description}
+                            </CardDescription>
                           </div>
                         </div>
                       </CardHeader>
@@ -198,13 +220,17 @@ export default function HowItWorks() {
                   <CardHeader>
                     <div className="flex items-center space-x-4 mb-4">
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-primary/50 flex items-center justify-center">
-                        {React.createElement(steps[activeStep].icon, { 
-                          className: `w-8 h-8 text-primary` 
+                        {React.createElement(steps[activeStep].icon, {
+                          className: `w-8 h-8 text-primary`,
                         })}
                       </div>
                       <div>
-                        <CardTitle className="text-2xl">{steps[activeStep].title}</CardTitle>
-                        <CardDescription className="text-lg">{steps[activeStep].description}</CardDescription>
+                        <CardTitle className="text-2xl">
+                          {steps[activeStep].title}
+                        </CardTitle>
+                        <CardDescription className="text-lg">
+                          {steps[activeStep].description}
+                        </CardDescription>
                       </div>
                     </div>
                   </CardHeader>
@@ -219,7 +245,9 @@ export default function HowItWorks() {
                           className="flex items-start space-x-3"
                         >
                           <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                          <span className="text-muted-foreground">{detail}</span>
+                          <span className="text-muted-foreground">
+                            {detail}
+                          </span>
                         </motion.li>
                       ))}
                     </ul>
@@ -233,7 +261,7 @@ export default function HowItWorks() {
         {/* Investment Strategies Section */}
         <section className="py-24 bg-muted/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -260,34 +288,58 @@ export default function HowItWorks() {
                 >
                   <Card className="glass-card hover:bg-card/70 transition-all duration-300 h-full border-2 hover:border-primary/30">
                     <CardHeader>
-                      <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${strategy.color} flex items-center justify-center mb-4`}>
+                      <div
+                        className={`w-16 h-16 rounded-xl bg-gradient-to-br ${strategy.color} flex items-center justify-center mb-4`}
+                      >
                         <strategy.icon className="w-8 h-8 text-primary" />
                       </div>
-                      <CardTitle className="text-xl mb-2">{strategy.name}</CardTitle>
-                      <CardDescription className="text-base">{strategy.description}</CardDescription>
+                      <CardTitle className="text-xl mb-2">
+                        {strategy.name}
+                      </CardTitle>
+                      <CardDescription className="text-base">
+                        {strategy.description}
+                      </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
                         <div className="flex justify-between items-center">
-                          <span className="text-muted-foreground">Expected APY:</span>
-                          <Badge variant="secondary" className="bg-green-500/10 text-green-400">
+                          <span className="text-muted-foreground">
+                            Expected APY:
+                          </span>
+                          <Badge
+                            variant="secondary"
+                            className="bg-green-500/10 text-green-400"
+                          >
                             {strategy.apy}
                           </Badge>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-muted-foreground">Risk Level:</span>
-                          <Badge variant={strategy.risk === 'Low' ? 'secondary' : 'outline'}>
+                          <span className="text-muted-foreground">
+                            Risk Level:
+                          </span>
+                          <Badge
+                            variant={
+                              strategy.risk === "Low" ? "secondary" : "outline"
+                            }
+                          >
                             {strategy.risk}
                           </Badge>
                         </div>
                         <div>
-                          <span className="text-muted-foreground text-sm">Protocols:</span>
+                          <span className="text-muted-foreground text-sm">
+                            Protocols:
+                          </span>
                           <div className="mt-2 space-y-1">
-                            {strategy.protocols.map((protocol, protocolIndex) => (
-                              <div key={protocolIndex} className="text-sm bg-muted/20 px-2 py-1 rounded">
-                                {protocol}
-                              </div>
-                            ))}
+                            {strategy.protocols.map(
+                              (protocol, protocolIndex) => (
+                                <div
+                                  key={protocolIndex}
+                                  className="text-sm bg-muted/20 px-2 py-1 rounded"
+                                >
+                                  {protocol}
+                                </div>
+                              )
+                            )}
                           </div>
                         </div>
                       </div>
@@ -302,7 +354,7 @@ export default function HowItWorks() {
         {/* SIP Lifecycle Section */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -325,74 +377,114 @@ export default function HowItWorks() {
                 {[
                   {
                     title: "SIP Creation",
-                    description: "Set up your investment parameters and preferences",
+                    description:
+                      "Set up your investment parameters and preferences",
                     icon: Settings,
                     color: "text-blue-400",
-                    details: ["Choose token and amount", "Set frequency", "Select strategy", "Enable insurance (optional)"],
-                    position: "left"
+                    details: [
+                      "Choose token and amount",
+                      "Set frequency",
+                      "Select strategy",
+                      "Enable insurance (optional)",
+                    ],
+                    position: "left",
                   },
                   {
                     title: "Smart Contract Deployment",
                     description: "Your SIP is deployed to the blockchain",
                     icon: Layers,
                     color: "text-purple-400",
-                    details: ["Contract verification", "Initial deposit", "Schedule activation", "Security checks"],
-                    position: "right"
+                    details: [
+                      "Contract verification",
+                      "Initial deposit",
+                      "Schedule activation",
+                      "Security checks",
+                    ],
+                    position: "right",
                   },
                   {
                     title: "Automated Execution",
                     description: "Regular investments happen automatically",
                     icon: Repeat,
                     color: "text-primary",
-                    details: ["Scheduled investments", "Protocol integration", "Transaction logging", "Yield accumulation"],
-                    position: "left"
+                    details: [
+                      "Scheduled investments",
+                      "Protocol integration",
+                      "Transaction logging",
+                      "Yield accumulation",
+                    ],
+                    position: "left",
                   },
                   {
                     title: "Yield Generation",
                     description: "Your investments start earning returns",
                     icon: TrendingUp,
                     color: "text-green-400",
-                    details: ["Staking rewards", "Lending interest", "Compound growth", "Real-time tracking"],
-                    position: "right"
+                    details: [
+                      "Staking rewards",
+                      "Lending interest",
+                      "Compound growth",
+                      "Real-time tracking",
+                    ],
+                    position: "right",
                   },
                   {
                     title: "Insurance Protection",
                     description: "Optional coverage against protocol risks",
                     icon: Shield,
                     color: "text-yellow-400",
-                    details: ["Premium collection", "Risk monitoring", "Claim processing", "DAO governance"],
-                    position: "left"
-                  }
+                    details: [
+                      "Premium collection",
+                      "Risk monitoring",
+                      "Claim processing",
+                      "DAO governance",
+                    ],
+                    position: "left",
+                  },
                 ].map((phase, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: phase.position === 'left' ? -50 : 50 }}
+                    initial={{
+                      opacity: 0,
+                      x: phase.position === "left" ? -50 : 50,
+                    }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.2 }}
                     viewport={{ once: true }}
                     className={`flex items-center ${
-                      phase.position === 'right' ? 'lg:flex-row-reverse' : ''
+                      phase.position === "right" ? "lg:flex-row-reverse" : ""
                     }`}
                   >
-                    <div className={`lg:w-1/2 ${
-                      phase.position === 'right' ? 'lg:pl-16' : 'lg:pr-16'
-                    }`}>
+                    <div
+                      className={`lg:w-1/2 ${
+                        phase.position === "right" ? "lg:pl-16" : "lg:pr-16"
+                      }`}
+                    >
                       <Card className="glass-card border-2 hover:border-primary/30 transition-colors">
                         <CardHeader>
                           <div className="flex items-center space-x-4">
                             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
-                              <phase.icon className={`w-6 h-6 ${phase.color}`} />
+                              <phase.icon
+                                className={`w-6 h-6 ${phase.color}`}
+                              />
                             </div>
                             <div>
-                              <CardTitle className="text-xl">{phase.title}</CardTitle>
-                              <CardDescription>{phase.description}</CardDescription>
+                              <CardTitle className="text-xl">
+                                {phase.title}
+                              </CardTitle>
+                              <CardDescription>
+                                {phase.description}
+                              </CardDescription>
                             </div>
                           </div>
                         </CardHeader>
                         <CardContent>
                           <ul className="space-y-2">
                             {phase.details.map((detail, detailIndex) => (
-                              <li key={detailIndex} className="flex items-center space-x-2 text-sm text-muted-foreground">
+                              <li
+                                key={detailIndex}
+                                className="flex items-center space-x-2 text-sm text-muted-foreground"
+                              >
                                 <CheckCircle className="w-4 h-4 text-green-400" />
                                 <span>{detail}</span>
                               </li>
@@ -418,7 +510,7 @@ export default function HowItWorks() {
         {/* Technical Details Section */}
         <section className="py-24 bg-muted/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -435,7 +527,9 @@ export default function HowItWorks() {
 
             <Tabs defaultValue="smart-contracts" className="space-y-8">
               <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 lg:w-[600px] mx-auto">
-                <TabsTrigger value="smart-contracts">Smart Contracts</TabsTrigger>
+                <TabsTrigger value="smart-contracts">
+                  Smart Contracts
+                </TabsTrigger>
                 <TabsTrigger value="automation">Automation</TabsTrigger>
                 <TabsTrigger value="security">Security</TabsTrigger>
               </TabsList>
@@ -456,53 +550,80 @@ export default function HowItWorks() {
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-8">
                         <div>
-                          <h4 className="font-semibold mb-4 text-primary">Core Contracts</h4>
+                          <h4 className="font-semibold mb-4 text-primary">
+                            Core Contracts
+                          </h4>
                           <ul className="space-y-3">
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
                                 <div className="font-medium">SIP Manager</div>
-                                <div className="text-sm text-muted-foreground">Handles SIP creation, execution, and management</div>
+                                <div className="text-sm text-muted-foreground">
+                                  Handles SIP creation, execution, and
+                                  management
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Strategy Router</div>
-                                <div className="text-sm text-muted-foreground">Routes funds to appropriate DeFi protocols</div>
+                                <div className="font-medium">
+                                  Strategy Router
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Routes funds to appropriate DeFi protocols
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Insurance Vault</div>
-                                <div className="text-sm text-muted-foreground">Manages insurance premiums and claims</div>
+                                <div className="font-medium">
+                                  Insurance Vault
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Manages insurance premiums and claims
+                                </div>
                               </div>
                             </li>
                           </ul>
                         </div>
                         <div>
-                          <h4 className="font-semibold mb-4 text-green-400">Protocol Integrations</h4>
+                          <h4 className="font-semibold mb-4 text-green-400">
+                            Protocol Integrations
+                          </h4>
                           <ul className="space-y-3">
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Marinade Finance</div>
-                                <div className="text-sm text-muted-foreground">Liquid staking for SOL</div>
+                                <div className="font-medium">
+                                  Marinade Finance
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Liquid staking for SOL
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Solend Protocol</div>
-                                <div className="text-sm text-muted-foreground">Lending and borrowing</div>
+                                <div className="font-medium">
+                                  Solend Protocol
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Lending and borrowing
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Jupiter Exchange</div>
-                                <div className="text-sm text-muted-foreground">Token swaps and routing</div>
+                                <div className="font-medium">
+                                  Jupiter Exchange
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Token swaps and routing
+                                </div>
                               </div>
                             </li>
                           </ul>
@@ -529,53 +650,81 @@ export default function HowItWorks() {
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-8">
                         <div>
-                          <h4 className="font-semibold mb-4 text-primary">Execution System</h4>
+                          <h4 className="font-semibold mb-4 text-primary">
+                            Execution System
+                          </h4>
                           <ul className="space-y-3">
                             <li className="flex items-start space-x-3">
                               <Clock className="w-5 h-5 text-blue-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Scheduled Execution</div>
-                                <div className="text-sm text-muted-foreground">Precise timing based on user preferences</div>
+                                <div className="font-medium">
+                                  Scheduled Execution
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Precise timing based on user preferences
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <Globe className="w-5 h-5 text-blue-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Decentralized Keepers</div>
-                                <div className="text-sm text-muted-foreground">Multiple nodes ensure reliability</div>
+                                <div className="font-medium">
+                                  Decentralized Keepers
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Multiple nodes ensure reliability
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <Target className="w-5 h-5 text-blue-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Gas Optimization</div>
-                                <div className="text-sm text-muted-foreground">Minimal transaction costs</div>
+                                <div className="font-medium">
+                                  Gas Optimization
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Minimal transaction costs
+                                </div>
                               </div>
                             </li>
                           </ul>
                         </div>
                         <div>
-                          <h4 className="font-semibold mb-4 text-green-400">Monitoring & Alerts</h4>
+                          <h4 className="font-semibold mb-4 text-green-400">
+                            Monitoring & Alerts
+                          </h4>
                           <ul className="space-y-3">
                             <li className="flex items-start space-x-3">
                               <BarChart3 className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Real-time Monitoring</div>
-                                <div className="text-sm text-muted-foreground">24/7 system health checks</div>
+                                <div className="font-medium">
+                                  Real-time Monitoring
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  24/7 system health checks
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <Shield className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Failure Detection</div>
-                                <div className="text-sm text-muted-foreground">Automatic retry mechanisms</div>
+                                <div className="font-medium">
+                                  Failure Detection
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Automatic retry mechanisms
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Success Notifications</div>
-                                <div className="text-sm text-muted-foreground">Instant execution confirmations</div>
+                                <div className="font-medium">
+                                  Success Notifications
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Instant execution confirmations
+                                </div>
                               </div>
                             </li>
                           </ul>
@@ -602,53 +751,79 @@ export default function HowItWorks() {
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-8">
                         <div>
-                          <h4 className="font-semibold mb-4 text-primary">Smart Contract Security</h4>
+                          <h4 className="font-semibold mb-4 text-primary">
+                            Smart Contract Security
+                          </h4>
                           <ul className="space-y-3">
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
                                 <div className="font-medium">Audited Code</div>
-                                <div className="text-sm text-muted-foreground">Third-party security audits</div>
+                                <div className="text-sm text-muted-foreground">
+                                  Third-party security audits
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Multi-sig Controls</div>
-                                <div className="text-sm text-muted-foreground">Distributed key management</div>
+                                <div className="font-medium">
+                                  Multi-sig Controls
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Distributed key management
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <CheckCircle className="w-5 h-5 text-green-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Upgrade Mechanisms</div>
-                                <div className="text-sm text-muted-foreground">Secure protocol updates</div>
+                                <div className="font-medium">
+                                  Upgrade Mechanisms
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Secure protocol updates
+                                </div>
                               </div>
                             </li>
                           </ul>
                         </div>
                         <div>
-                          <h4 className="font-semibold mb-4 text-yellow-400">Insurance Coverage</h4>
+                          <h4 className="font-semibold mb-4 text-yellow-400">
+                            Insurance Coverage
+                          </h4>
                           <ul className="space-y-3">
                             <li className="flex items-start space-x-3">
                               <Shield className="w-5 h-5 text-yellow-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Protocol Failures</div>
-                                <div className="text-sm text-muted-foreground">Smart contract exploits</div>
+                                <div className="font-medium">
+                                  Protocol Failures
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Smart contract exploits
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <Shield className="w-5 h-5 text-yellow-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">Execution Failures</div>
-                                <div className="text-sm text-muted-foreground">Missed investments</div>
+                                <div className="font-medium">
+                                  Execution Failures
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Missed investments
+                                </div>
                               </div>
                             </li>
                             <li className="flex items-start space-x-3">
                               <Shield className="w-5 h-5 text-yellow-400 mt-0.5" />
                               <div>
-                                <div className="font-medium">DAO Governance</div>
-                                <div className="text-sm text-muted-foreground">Community-driven claims</div>
+                                <div className="font-medium">
+                                  DAO Governance
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  Community-driven claims
+                                </div>
                               </div>
                             </li>
                           </ul>
@@ -675,7 +850,8 @@ export default function HowItWorks() {
                 Ready to Start Your SIP?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Join thousands of investors already using Siphere for automated DeFi investing
+                Join thousands of investors already using Siphere for automated
+                DeFi investing
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
