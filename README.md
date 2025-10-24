@@ -1,15 +1,10 @@
 # Siphere
-**[Live Website](https://siphere.vercel.app/)**
+**[Live Website]()**
 
 **[Watch the video]()**
 
 Siphere is a decentralized platform built on the Solana blockchain that enables users to automate long-term crypto investing through Systematic Investment Plans (SIPs), integrating staking, lending, and optional insurance for enhanced risk protection.
 
-![Home Page](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/HomePage.png)
-![Features](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/Powerful-Features.png)
-![Dashboard](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/Portfolio%20Dashboard.png)
-![Track your Investment](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/Track-Your-Investments.png)
-![Investment Section](https://github.com/NileshRP010/Siphere/blob/main/attached%20assets/Investment.png)
 
 ---
 
@@ -61,5 +56,6 @@ git clone https://github.com/your-repo/your-project.git
 cd your-project
 npm install
 npm run dev
+
 
 
