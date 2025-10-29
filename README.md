@@ -1,5 +1,5 @@
 # Siphere
-**[Live Website]()**
+**[Live Website](https://siphere.vercel.app/)**
 
 **[Watch the video]()**
 
@@ -56,6 +56,7 @@ git clone https://github.com/your-repo/your-project.git
 cd your-project
 npm install
 npm run dev
+
 
 
 
