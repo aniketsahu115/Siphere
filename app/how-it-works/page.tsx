@@ -19,6 +19,7 @@ import {
   Layers,
   Globe,
   Lock,
+  Users,
 } from "lucide-react";
 import {
   Card,
@@ -834,6 +835,238 @@ export default function HowItWorks() {
                 </motion.div>
               </TabsContent>
             </Tabs>
+          </div>
+        </section>
+
+        {/* Visual Architecture Diagrams Section */}
+        <section className="py-24 bg-muted/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <Badge
+                variant="secondary"
+                className="mb-6 bg-primary/10 text-primary border-primary/20"
+              >
+                <Layers className="w-4 h-4 mr-2" />
+                Visual Guides
+              </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                System Architecture & Flow
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Detailed visual representations of how Siphere works under the
+                hood
+              </p>
+            </motion.div>
+
+            <div className="space-y-12">
+              {/* Technical Architecture Diagram */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="glass-card overflow-hidden">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <CardTitle className="flex items-center text-2xl">
+                          <Layers className="w-6 h-6 mr-3 text-primary" />
+                          Technical Architecture
+                        </CardTitle>
+                        <CardDescription className="text-base mt-2">
+                          Complete system architecture showing smart contracts,
+                          protocols, and integrations
+                        </CardDescription>
+                      </div>
+                      <Badge variant="secondary" className="hidden sm:block">
+                        System Design
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="relative w-full bg-muted/30 rounded-lg overflow-hidden border-2 border-primary/10 hover:border-primary/30 transition-colors">
+                      <img
+                        src="/attached assets/technical architecture.JPG"
+                        alt="Siphere Technical Architecture Diagram"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-semibold text-foreground">
+                          Architecture Overview:
+                        </span>{" "}
+                        This diagram illustrates the complete technical stack
+                        including smart contract layers, blockchain integration
+                        with Solana, protocol connections (Marinade Finance,
+                        Solend, Jupiter), and the user interface layer.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* SIP Logic Diagram */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="glass-card overflow-hidden">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <CardTitle className="flex items-center text-2xl">
+                          <Settings className="w-6 h-6 mr-3 text-green-400" />
+                          SIP Logic Flow
+                        </CardTitle>
+                        <CardDescription className="text-base mt-2">
+                          Step-by-step logic flow of how SIP investments are
+                          processed and executed
+                        </CardDescription>
+                      </div>
+                      <Badge
+                        variant="secondary"
+                        className="hidden sm:block bg-green-500/10 text-green-400"
+                      >
+                        Core Logic
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="relative w-full bg-muted/30 rounded-lg overflow-hidden border-2 border-green-500/10 hover:border-green-500/30 transition-colors">
+                      <img
+                        src="/attached assets/SIP Logic.JPG"
+                        alt="SIP Logic Flow Diagram"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <div className="mt-6 p-4 bg-green-500/5 border border-green-500/20 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-semibold text-foreground">
+                          Logic Flow:
+                        </span>{" "}
+                        This flowchart demonstrates the decision-making process
+                        from SIP creation, through automated execution, strategy
+                        selection, fund deployment, and yield generation with
+                        comprehensive error handling.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* User Flow Diagram */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="glass-card overflow-hidden">
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <CardTitle className="flex items-center text-2xl">
+                          <Users className="w-6 h-6 mr-3 text-blue-400" />
+                          User Flow Journey
+                        </CardTitle>
+                        <CardDescription className="text-base mt-2">
+                          Complete user journey from wallet connection to
+                          investment tracking
+                        </CardDescription>
+                      </div>
+                      <Badge
+                        variant="secondary"
+                        className="hidden sm:block bg-blue-500/10 text-blue-400"
+                      >
+                        User Experience
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="relative w-full bg-muted/30 rounded-lg overflow-hidden border-2 border-blue-500/10 hover:border-blue-500/30 transition-colors">
+                      <img
+                        src="/attached assets/user flow.JPG"
+                        alt="User Flow Journey Diagram"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <div className="mt-6 p-4 bg-blue-500/5 border border-blue-500/20 rounded-lg">
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-semibold text-foreground">
+                          User Journey:
+                        </span>{" "}
+                        This diagram maps the complete user experience including
+                        wallet connection, SIP configuration, strategy
+                        selection, insurance options, transaction confirmations,
+                        and ongoing portfolio management.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Key Highlights */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Card className="glass-card bg-gradient-to-r from-primary/5 via-transparent to-primary/5 border-primary/20">
+                  <CardHeader>
+                    <CardTitle className="text-center text-2xl">
+                      Key Architecture Highlights
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="text-center p-6 bg-muted/20 rounded-lg">
+                        <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Lock className="w-6 h-6 text-primary" />
+                        </div>
+                        <h4 className="font-semibold mb-2">Secure & Audited</h4>
+                        <p className="text-sm text-muted-foreground">
+                          All smart contracts are thoroughly audited and follow
+                          best security practices
+                        </p>
+                      </div>
+                      <div className="text-center p-6 bg-muted/20 rounded-lg">
+                        <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Zap className="w-6 h-6 text-green-400" />
+                        </div>
+                        <h4 className="font-semibold mb-2">Lightning Fast</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Built on Solana for sub-second transaction finality
+                          and low fees
+                        </p>
+                      </div>
+                      <div className="text-center p-6 bg-muted/20 rounded-lg">
+                        <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Target className="w-6 h-6 text-blue-400" />
+                        </div>
+                        <h4 className="font-semibold mb-2">
+                          User-Centric Design
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          Intuitive interface designed for both beginners and
+                          experienced DeFi users
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
           </div>
         </section>
 
