@@ -38,7 +38,7 @@ export default function About() {
 
   const teamMembers = [
     {
-      name: "Arun Pratap Singh",
+      name: "Arun Pratap Singh Chandel",
       role: "Co-Founder & CEO",
       bio: "Former DeFi protocol architect with 1+ years in blockchain technology. Led development teams at major web2 platforms.",
       image: "/attached assets/Arun Pratap Singh.png",
@@ -52,9 +52,9 @@ export default function About() {
         "DeFi Protocols",
         "Team Leadership",
       ],
-    },
+    },  
     {
-      name: "Nilesh Pathak",
+      name: "Aditya Raj",
       role: "Co-Founder ",
       bio: "Smart contract security expert and former Community Builder.",
       image: "https://avatars.githubusercontent.com/u/171451738?v=4",
